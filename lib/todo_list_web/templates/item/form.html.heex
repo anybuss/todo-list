@@ -1,0 +1,10 @@
+<.form let={f} for={@changeset} action={@action} class="nova-tarefa">
+
+  <%= label f, :text %>
+  <%= text_input f, :text, class: "tarefa__nome", placeholder: "Nova tarefa" %>
+  <%= error_tag f, :text %>
+
+  <div>
+    <%= submit "Adicionar", class: "btn__tarefa" %>
+  </div>
+</.form>

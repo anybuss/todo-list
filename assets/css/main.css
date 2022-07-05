@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+:root {
+    --color-background: #16161a;
+    --color-card: #242629;
+    --color-main: #fffffe;
+    --color-secondary: #72757e;
+    --color-check: #2cb67d;
+    --color-progress: #7f5af0;
+    --color-delete: #f25f4c;
+
+    --font-family: "Quicksand", sans-serif;
+}
+
+body {
+    color: var(--color-main);
+    background-color: var(--color-background);
+    font-family: var(--font-family);
+    font-weight: 400;
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Página app*/
+.todo-app {
+    max-width: 1440px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.btn {
+    background-color: var(--color-main);
+    border: none;
+    border-radius: .25rem;
+    padding: .5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn:hover {
+    color: var(--color-main);
+    background-color: var(--color-progress);
+}
+
+.title {
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-check);
+    margin-top: 1rem;
+}
+
+.subtitle {
+    color: var(--color-progress);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.text {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+}
+
+.nova-tarefa {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.tarefa__nome {
+    color: var(--color-main);
+    background-color: var(--color-card);
+    border: none;
+    border-radius: .25rem;
+    padding: .5rem;
+    width: 70%;
+}
+
+.tarefa__nome:focus {
+    outline: 1px solid var(--color-progress);
+}
+
+.btn__tarefa {
+    color: var(--color-main);
+    background-color: var(--color-progress);
+    border-radius: .5rem;
+    border: 2px solid var(--color-progress);
+    padding: .25rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn__tarefa:hover {
+    background-color: #4f3894;
+    border: 2px solid var(--color-progress);
+}
+
+.tarefas {
+    margin-top: 2rem;
+}
+
+.lista-tarefas {
+    background-color: var(--color-card);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 2rem;
+}
+
+.tarefa {
+    border: 2px solid var(--color-secondary);
+    border-radius: .25rem;
+    margin: .25rem;
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+}
+
+.tarefa__done {
+    color: var(--color-check);
+    font-style: italic;
+    width: 80%;
+    text-align: center;
+    border: 2px solid var(--color-secondary);
+    border-radius: .25rem;
+    margin: .25rem;
+    padding: 1rem;
+}
+
+.tarefa__delete {
+    color: var(--color-main);
+    cursor: pointer;
+    background-color: var(--color-delete);
+    border: 1px solid var(--color-delete);
+    border-radius: .25rem;
+    font-size: .75rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-left: .5rem;
+}
+
+.tarefa__delete:hover {
+    background-color: #cc422f;
+    border-color: #cc422f;
+}
+
+.tarefa__progress {
+    color: var(--color-main);
+    cursor: pointer;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-secondary);
+    border-radius: .25rem;
+    font-size: .75rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-right: .5rem;
+}
+
+.tarefa__progress:hover {
+    background-color: var(--color-progress);
+    border-color: #4f3894;
+}
+
+.tarefa__check {
+    color: var(--color-main);
+    cursor: pointer;
+    background-color: var(--color-check);
+    border: 1px solid var(--color-check);
+    border-radius: .25rem;
+    font-size: .75rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-right: .5rem;
+}
+
+.tarefa__check:hover {
+    background-color: var(--color-check);
+    border-color: #1c865a;
+}
+
+.rodape {
+    color: var(--color-main);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rodape .text {
+    margin-top: 0;
+    padding-bottom: .25rem;
+    font-size: .75rem;
+}
+
+@media (max-width: 750px) {
+    .todo-app {
+        margin: auto;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: .75rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .nova-tarefa {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+
+    .lista-tarefas {
+        font-size: .9rem;
+        line-height: 1.5rem;
+    }
+}
+
+/* Páginas de login e cadastro */
+.app {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 950px;
+    height: 90vh;
+    margin: 0 auto;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 1rem;
+}
+
+.app .subtitle {
+    color: var(--color-main);
+    font-weight: 600;
+}
+
+.wrapper {
+    width: 45%;
+    margin-top: 1rem;
+}
+
+.box {
+    background-color: var(--color-card);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.form .form__label {
+    display: block;
+    font-size: .75rem;
+    padding-bottom: .5rem;
+}
+
+.form .form__input {
+    color: var(--color-main);
+    background-color: var(--color-background);
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border: none;
+}
+
+.form__input.btn__login,
+.form__input.btn__cadastro {
+    background-color: var(--color-check);
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.form__input.btn__login:hover,
+.form__input.btn__cadastro:hover {
+    background-color: #1c865a;
+}
+
+.form__input::placeholder {
+    color: var(--color-secondary);
+    padding-left: .25rem;
+}
+
+.box .text {
+    font-size: .75rem;
+    text-align: center;
+}
+.box .link {
+    color: var(--color-check);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.box .link:hover {
+    color: #1c865a;
+    text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+    .app {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .about {
+        width: auto;
+    }
+
+    .app .title {
+        font-size: 1.5rem;
+        margin-bottom: .75rem;
+    }
+
+    .app .subtitle {
+        font-size: 1rem;
+    }
+
+    .wrapper {
+        width: auto;
+    }
+}
+
+/* Configurações extras */
+label {
+    display: none;
+}
+

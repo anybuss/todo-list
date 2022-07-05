@@ -17,11 +17,11 @@ defmodule TodoListWeb.Router do
   scope "/", TodoListWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", ItemController, :index
+    resources "/items", ItemController
+    get "/items/toogle/:id", ItemController, :toggle
+    get "/login", LoginController, :index
+    get "/cadastro", CadastroController, :index
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", TodoListWeb do
-  #   pipe_through :api
-  # end
+  
 end

@@ -1,0 +1,25 @@
+<section>
+  <div class="todo-app">
+    <h1 class="title">To-Do List</h1>
+    <h2 class="subtitle">Olá!</h2>
+    <p class="text">Que tal organizar seu dia começando uma nova tarefa?</p>
+
+    <div class="new">
+      <%= render "form.html", Map.put(assigns, :action, Routes.item_path(@conn, :create)) %>
+    </div>
+    
+    <div class="tarefas">
+      <ul class="lista-tarefas">
+        <%= for item <- @items do %>
+          <li data-id={item.id} class={completed(item)}>
+            <a href={Routes.item_path(@conn, :toggle, item.id)} class={checked(item)}>
+              <%= content(item) %>
+            </a>
+            <%= item.text %>
+            <%= link "✗", class: "tarefa__delete", to: Routes.item_path(@conn, :delete, item), method: :delete, data: [confirm: "Deseja remover essa tarefa permanentemente?"] %>
+          </li>
+        <%= end %>
+      </ul>
+    </div>
+  </div>
+</section>
