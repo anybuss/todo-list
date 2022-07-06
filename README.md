@@ -27,7 +27,7 @@ ou
 ```
 mix deps.get
 ```
-Se tiver algum erro na instação das dependências você será avisado. Certifique-se de estar com tudo configurado antes de fazer o próximo comando:
+Se tiver algum erro na instalação das dependências você será avisado. Certifique-se de estar com tudo configurado antes de fazer o próximo comando:
 ```
 mix phx.server
 ```
