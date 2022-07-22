@@ -31,6 +31,6 @@ Se tiver algum erro na instalação das dependências você será avisado. Certi
 ```
 mix phx.server
 ```
-Se você fez tudo certo até aqui, visite [localhost:4000](http://localhost:4000/) e você já conseguirá vizualizar essa aplicação funcionando.
+Se você fez tudo certo até aqui, visite [localhost:4000](http://localhost:4000/) e você já conseguirá visualizar essa aplicação funcionando.
 
 Digite `ctrl+c/sair` no terminal quando quiser sair do projeto, pois assim o localhost será encerrado.
