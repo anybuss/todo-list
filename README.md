@@ -1,36 +1,71 @@
-# To-Do List | Elixir & Phoenix
+# To-Do List
 
-Features principais solicitadas como desafio técnico para vaga de estágio na Distu.  
+## Sobre o Projeto
 
-Todo-list utilizando Elixir e framework Phoenix para utilização na web.  
+Este projeto é uma aplicação web desenvolvida com Elixir e o framework Phoenix. A funcionalidade principal é uma lista de tarefas onde os usuários podem criar, marcar como pendente ou concluída, e remover tarefas. Recursos de login e cadastro foram planejados, mas não completados.
 
-Nesse exemplo, o usuário é capaz de criar sua lista de tarefas a fazer, trocar o status dela de "pendente" para "concluída" e vice-versa. É possível também remover uma tarefa da lista, independente do status dela.  
+### Funcionalidades
 
-Features bônus foram solicitadas, como fazer o login/cadastro de novos usuários com redirecionamento para sua própria conta, página de login e cadastro - porém essa atividade ficou incompleta (o layout das páginas estão no arquivo, sem o uso da lógica do negócio).  
+- **Criação de Lista de Tarefas**: Os usuários podem adicionar tarefas à sua lista.
+- **Gerenciamento de Status da Tarefa**: Alteração do status das tarefas entre "pendente" e "concluída".
+- **Remoção de Tarefas**: Capacidade de remover tarefas da lista.
+- **Login/Cadastro de Usuários**: Planejado, mas não implementado completamente.
 
-## Pré-requisitos
-Para rodar o projeto em um servidor local, é necessário que você tenha instalado na sua máquina: 
+### Restrições
 
-> [Elixir](https://elixir-lang.org/install.html)  
->_V1.13.0 compiled with Erlang/OTP 24_ ou superior   
->
->[Phoenix - Framework](https://hexdocs.pm/phoenix/installation.html)  
-> _V1.6.9_ ou superior
+- **Interface de Login/Cadastro Incompleta**: As páginas de login e cadastro existem, mas sem lógica de negócios funcional.
 
-Após essas instalações, clone o projeto para seu computador e abra o terminal na pasta do projeto (utilizei Linux).  
+## Tecnologias Utilizadas
 
-Verifique todas as dependências necessárias para abrir o projeto com:
-```
-mix setup
-```
-ou 
-```
-mix deps.get
-```
-Se tiver algum erro na instalação das dependências você será avisado. Certifique-se de estar com tudo configurado antes de fazer o próximo comando:
-```
-mix phx.server
-```
-Se você fez tudo certo até aqui, visite [localhost:4000](http://localhost:4000/) e você já conseguirá visualizar essa aplicação funcionando.
+- Elixir
+- Phoenix - Framework
+- Erlang/OTP 24
 
-Digite `ctrl+c/sair` no terminal quando quiser sair do projeto, pois assim o localhost será encerrado.
+## Instalação e Execução
+
+### Pré-Requisitos
+
+Para executar o projeto, é necessário ter instalado:
+
+- Elixir (V1.13.0 ou superior, compilado com Erlang/OTP 24)
+- Phoenix - Framework (V1.6.9 ou superior)
+
+### Passo a Passo
+
+1. Clone o repositório
+
+   ```bash
+   git clone git@github.com:anybuss/todo-list.git
+   ```
+
+2. Entre na pasta do projeto
+
+   ```bash
+   cd todo-list
+   ```
+
+3. Na raiz do projeto instale as dependências
+
+   ```bash
+   mix setup
+   ```
+
+   ou
+
+   ```bash
+    mix deps.get
+   ```
+
+4. Execute o servidor
+
+   ```bash
+   mix phx.server
+   ```
+
+5. Acesse o servidor local na porta `http://localhost:4000/`
+
+---
+
+Desenvolvido por Any Buss 🖤
+
+[Voltar ao topo ⬆](#todo-list)
